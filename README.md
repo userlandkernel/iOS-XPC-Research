@@ -15,3 +15,8 @@ Currently I have made the following advancements in an attempt to find vulnerabl
 - Analyzed runningboard (RunningBoardServices) and created code to interface with it (Abusing the xpc service spawn launchd jobs no longer works due to sandbox policies)
 - Some recent vulnerabilities in XPC services on iOS and exploits for it can be found here [Mov ax br Blog][(https://movaxbx.ru/2021/09/)
 - Some good information on where to start researching XPC can be found here by researcher [Ian Beer](https://thecyberwire.com/events/docs/IanBeer_JSS_Slides.pdf)
+
+## Tools and resources
+- [XPoCe 2.0](https://www.newosxbook.com/tools/XPoCe2.html) By Jonathan Levin. Doesn't support arm64 and up.
+- [Entitlements database](https://newosxbook.com/ent.jl?osVer=iOS16&p=possess) By Jonathan Levin. Comes in handy for picking privelege escallation targets.
+- [IOS Runtime Headers](https://developer.limneos.net/index.php?ios=17.1). Private Frameworks often implement High-Level logic for XPC
