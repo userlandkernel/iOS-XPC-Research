@@ -21,8 +21,10 @@ done
 ## For users
 Currently I have made the following advancements in an attempt to find vulnerable XPC services that either have type confusion or privilege escallation within and outside the sandbox:
 - Analyzed runningboard (RunningBoardServices) and created code to interface with it (Abusing the xpc service spawn launchd jobs no longer works due to sandbox policies)
+- Analyzed nehelper (NetworkExtension) and created code to interface with it (WIP)
 - Some recent vulnerabilities in XPC services on iOS and exploits for it can be found here [Mov ax br Blog][(https://movaxbx.ru/2021/09/)
 - Some good information on where to start researching XPC can be found here by researcher [Ian Beer](https://thecyberwire.com/events/docs/IanBeer_JSS_Slides.pdf)
+
 
 ## Tools and resources
 - [XPoCe 2.0](https://www.newosxbook.com/tools/XPoCe2.html) By Jonathan Levin. Doesn't support arm64 and up.

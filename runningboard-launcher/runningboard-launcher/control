@@ -1,8 +1,0 @@
-Package: sem.voigtlander.xpcsploit
-Name: xpcsploit
-Version: 0.0.1
-Architecture: iphoneos-arm
-Description: An awesome application!
-Maintainer: Sem
-Author: Sem
-Section: Utilities
