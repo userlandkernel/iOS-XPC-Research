@@ -9,7 +9,7 @@ Implementing reverse engineered XPC service clients
 5. In order to examine XPC services you can use my scripts with frida
 6. I also have used this tweak [XPC Sniffer](https://github.com/evilpenguin/XPCSniffer) as an alternative to frida
 7. As of iOS 16.5 there seems to no longer be an xpcd cache nor a dyld_shared_cache. This complicates research a bit
-8. Run on iOS to get an idea of existing XPC services
+8. Run on iOS to get an idea of existing XPC services accessible by lockdownd (over USB).
 ```
 for file in $(find / -type f -executable -print);do
   jtool2 -d "$file" 2>/dev/null | grep -m 2 "lockdown_checkin_xpc" | head -n 3 | tail -n 1 | tr -d '\t' | awk -F '_lockdown_checkin_xpc' '{pr
