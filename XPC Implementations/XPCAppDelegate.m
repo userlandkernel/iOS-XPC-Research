@@ -4,6 +4,7 @@
 #import "XPCRootViewController.h"
 #import "XPCSploit.h"
 
+extern const char **environ;
 
 @implementation XPCAppDelegate
 
@@ -19,7 +20,10 @@
 
 // Run the exploit and return true on success
 - (BOOL)runXPCExploit:(NSError**)error {
-        return NEHelperLauncher(CALCULATOR_PATH_IOS16, "com.apple.calculator");
+	return RunningBoardLauncher(CALCULATOR_PATH_IOS16, "com.apple.calculator",
+        [self jobLabel].UTF8String, "/tmp/stdout",
+        "/tmp/stderr", environ, "iOS 14 runningboard XPC");
+//        return NEHelperLauncher(CALCULATOR_PATH_IOS16, "com.apple.calculator");
 }
 
 
